@@ -79,7 +79,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1104, 575);
+            this.groupBox1.Size = new System.Drawing.Size(1104, 395);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dades";
@@ -95,7 +95,7 @@
             this.groupBox5.Controls.Add(this.groupBox7);
             this.groupBox5.Location = new System.Drawing.Point(559, 175);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(539, 254);
+            this.groupBox5.Size = new System.Drawing.Size(539, 206);
             this.groupBox5.TabIndex = 5;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Curs on es vol matricular";
@@ -144,7 +144,7 @@
             this.groupBox4.Controls.Add(this.groupBox6);
             this.groupBox4.Location = new System.Drawing.Point(7, 175);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(534, 254);
+            this.groupBox4.Size = new System.Drawing.Size(534, 206);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Curs on està matriculat";
@@ -395,7 +395,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1143, 652);
+            this.ClientSize = new System.Drawing.Size(1143, 429);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
