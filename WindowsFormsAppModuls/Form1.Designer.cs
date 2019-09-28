@@ -150,6 +150,7 @@
             this.comboBoxCursVol.Name = "comboBoxCursVol";
             this.comboBoxCursVol.Size = new System.Drawing.Size(420, 24);
             this.comboBoxCursVol.TabIndex = 8;
+            this.comboBoxCursVol.SelectedIndexChanged += new System.EventHandler(this.comboBoxCursVol_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -174,6 +175,7 @@
             // radioButtonTardaVol
             // 
             this.radioButtonTardaVol.AutoSize = true;
+            this.radioButtonTardaVol.Checked = true;
             this.radioButtonTardaVol.Location = new System.Drawing.Point(166, 21);
             this.radioButtonTardaVol.Name = "radioButtonTardaVol";
             this.radioButtonTardaVol.Size = new System.Drawing.Size(67, 21);
@@ -189,9 +191,9 @@
             this.radioButtonMatiVol.Name = "radioButtonMatiVol";
             this.radioButtonMatiVol.Size = new System.Drawing.Size(55, 21);
             this.radioButtonMatiVol.TabIndex = 0;
-            this.radioButtonMatiVol.TabStop = true;
             this.radioButtonMatiVol.Text = "Matí";
             this.radioButtonMatiVol.UseVisualStyleBackColor = true;
+            this.radioButtonMatiVol.CheckedChanged += new System.EventHandler(this.radioButtonMatiVol_CheckedChanged);
             // 
             // groupBox4
             // 
@@ -252,6 +254,7 @@
             this.comboBoxCurs.Name = "comboBoxCurs";
             this.comboBoxCurs.Size = new System.Drawing.Size(420, 24);
             this.comboBoxCurs.TabIndex = 2;
+            this.comboBoxCurs.SelectedIndexChanged += new System.EventHandler(this.comboBoxCurs_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -287,6 +290,7 @@
             // radioButtonMati
             // 
             this.radioButtonMati.AutoSize = true;
+            this.radioButtonMati.Checked = true;
             this.radioButtonMati.Location = new System.Drawing.Point(65, 21);
             this.radioButtonMati.Name = "radioButtonMati";
             this.radioButtonMati.Size = new System.Drawing.Size(55, 21);
@@ -294,6 +298,7 @@
             this.radioButtonMati.TabStop = true;
             this.radioButtonMati.Text = "Matí";
             this.radioButtonMati.UseVisualStyleBackColor = true;
+            this.radioButtonMati.CheckedChanged += new System.EventHandler(this.radioButtonMati_CheckedChanged);
             // 
             // groupBox3
             // 
@@ -326,6 +331,7 @@
             // 
             // comboBoxModul
             // 
+            this.comboBoxModul.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxModul.FormattingEnabled = true;
             this.comboBoxModul.Location = new System.Drawing.Point(84, 27);
             this.comboBoxModul.Name = "comboBoxModul";
@@ -410,6 +416,7 @@
             this.buttonAfegirResum.TabIndex = 6;
             this.buttonAfegirResum.Text = "Afegir resum";
             this.buttonAfegirResum.UseVisualStyleBackColor = true;
+            this.buttonAfegirResum.Click += new System.EventHandler(this.buttonAfegirResum_Click);
             // 
             // groupBox8
             // 
@@ -459,6 +466,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox5.ResumeLayout(false);
