@@ -30,11 +30,17 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.comboBoxProfessorVol = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBoxTutorVol = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboBoxCursVol = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.radioButtonTardaVol = new System.Windows.Forms.RadioButton();
             this.radioButtonMatiVol = new System.Windows.Forms.RadioButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxProfessor = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxTutor = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -54,12 +60,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePickerDataPeticio = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.buttonAfegirResum = new System.Windows.Forms.Button();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.buttonEliminarSeleccionats = new System.Windows.Forms.Button();
+            this.buttonEliminarTots = new System.Windows.Forms.Button();
+            this.listBoxResum = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -67,10 +72,12 @@
             this.groupBox6.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.buttonAfegirResum);
             this.groupBox1.Controls.Add(this.groupBox5);
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox3);
@@ -79,26 +86,79 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1104, 575);
+            this.groupBox1.Size = new System.Drawing.Size(1104, 419);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dades";
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.comboBox2);
+            this.groupBox5.Controls.Add(this.comboBoxProfessorVol);
             this.groupBox5.Controls.Add(this.label8);
-            this.groupBox5.Controls.Add(this.textBox1);
+            this.groupBox5.Controls.Add(this.textBoxTutorVol);
             this.groupBox5.Controls.Add(this.label9);
-            this.groupBox5.Controls.Add(this.comboBox3);
+            this.groupBox5.Controls.Add(this.comboBoxCursVol);
             this.groupBox5.Controls.Add(this.label10);
             this.groupBox5.Controls.Add(this.groupBox7);
             this.groupBox5.Location = new System.Drawing.Point(559, 175);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(539, 254);
+            this.groupBox5.Size = new System.Drawing.Size(539, 197);
             this.groupBox5.TabIndex = 5;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Curs on es vol matricular";
+            // 
+            // comboBoxProfessorVol
+            // 
+            this.comboBoxProfessorVol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxProfessorVol.FormattingEnabled = true;
+            this.comboBoxProfessorVol.Location = new System.Drawing.Point(110, 161);
+            this.comboBoxProfessorVol.Name = "comboBoxProfessorVol";
+            this.comboBoxProfessorVol.Size = new System.Drawing.Size(420, 24);
+            this.comboBoxProfessorVol.TabIndex = 12;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(8, 168);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(69, 17);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Professor";
+            // 
+            // textBoxTutorVol
+            // 
+            this.textBoxTutorVol.Location = new System.Drawing.Point(110, 133);
+            this.textBoxTutorVol.Name = "textBoxTutorVol";
+            this.textBoxTutorVol.ReadOnly = true;
+            this.textBoxTutorVol.Size = new System.Drawing.Size(420, 22);
+            this.textBoxTutorVol.TabIndex = 10;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(8, 136);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(42, 17);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Tutor";
+            // 
+            // comboBoxCursVol
+            // 
+            this.comboBoxCursVol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCursVol.FormattingEnabled = true;
+            this.comboBoxCursVol.Location = new System.Drawing.Point(110, 102);
+            this.comboBoxCursVol.Name = "comboBoxCursVol";
+            this.comboBoxCursVol.Size = new System.Drawing.Size(420, 24);
+            this.comboBoxCursVol.TabIndex = 8;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(8, 109);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(37, 17);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Curs";
             // 
             // groupBox7
             // 
@@ -135,7 +195,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.comboBox1);
+            this.groupBox4.Controls.Add(this.comboBoxProfessor);
             this.groupBox4.Controls.Add(this.label7);
             this.groupBox4.Controls.Add(this.textBoxTutor);
             this.groupBox4.Controls.Add(this.label6);
@@ -144,18 +204,19 @@
             this.groupBox4.Controls.Add(this.groupBox6);
             this.groupBox4.Location = new System.Drawing.Point(7, 175);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(534, 254);
+            this.groupBox4.Size = new System.Drawing.Size(534, 197);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Curs on està matriculat";
             // 
-            // comboBox1
+            // comboBoxProfessor
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(108, 161);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(420, 24);
-            this.comboBox1.TabIndex = 6;
+            this.comboBoxProfessor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxProfessor.FormattingEnabled = true;
+            this.comboBoxProfessor.Location = new System.Drawing.Point(108, 161);
+            this.comboBoxProfessor.Name = "comboBoxProfessor";
+            this.comboBoxProfessor.Size = new System.Drawing.Size(420, 24);
+            this.comboBoxProfessor.TabIndex = 6;
             // 
             // label7
             // 
@@ -170,6 +231,7 @@
             // 
             this.textBoxTutor.Location = new System.Drawing.Point(108, 133);
             this.textBoxTutor.Name = "textBoxTutor";
+            this.textBoxTutor.ReadOnly = true;
             this.textBoxTutor.Size = new System.Drawing.Size(420, 22);
             this.textBoxTutor.TabIndex = 4;
             // 
@@ -340,62 +402,60 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Data petició";
             // 
-            // comboBox2
+            // buttonAfegirResum
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(110, 161);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(420, 24);
-            this.comboBox2.TabIndex = 12;
+            this.buttonAfegirResum.Location = new System.Drawing.Point(6, 378);
+            this.buttonAfegirResum.Name = "buttonAfegirResum";
+            this.buttonAfegirResum.Size = new System.Drawing.Size(75, 30);
+            this.buttonAfegirResum.TabIndex = 6;
+            this.buttonAfegirResum.Text = "Afegir resum";
+            this.buttonAfegirResum.UseVisualStyleBackColor = true;
             // 
-            // label8
+            // groupBox8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(8, 168);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(69, 17);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Professor";
+            this.groupBox8.Controls.Add(this.listBoxResum);
+            this.groupBox8.Controls.Add(this.buttonEliminarTots);
+            this.groupBox8.Controls.Add(this.buttonEliminarSeleccionats);
+            this.groupBox8.Location = new System.Drawing.Point(19, 438);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(1098, 277);
+            this.groupBox8.TabIndex = 1;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Resum";
             // 
-            // textBox1
+            // buttonEliminarSeleccionats
             // 
-            this.textBox1.Location = new System.Drawing.Point(110, 133);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(420, 22);
-            this.textBox1.TabIndex = 10;
+            this.buttonEliminarSeleccionats.Location = new System.Drawing.Point(7, 22);
+            this.buttonEliminarSeleccionats.Name = "buttonEliminarSeleccionats";
+            this.buttonEliminarSeleccionats.Size = new System.Drawing.Size(184, 31);
+            this.buttonEliminarSeleccionats.TabIndex = 0;
+            this.buttonEliminarSeleccionats.Text = "Eliminar seleccionats";
+            this.buttonEliminarSeleccionats.UseVisualStyleBackColor = true;
             // 
-            // label9
+            // buttonEliminarTots
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(8, 136);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 17);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Tutor";
+            this.buttonEliminarTots.Location = new System.Drawing.Point(197, 22);
+            this.buttonEliminarTots.Name = "buttonEliminarTots";
+            this.buttonEliminarTots.Size = new System.Drawing.Size(184, 31);
+            this.buttonEliminarTots.TabIndex = 1;
+            this.buttonEliminarTots.Text = "Eliminar seleccionats";
+            this.buttonEliminarTots.UseVisualStyleBackColor = true;
             // 
-            // comboBox3
+            // listBoxResum
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(110, 102);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(420, 24);
-            this.comboBox3.TabIndex = 8;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(8, 109);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(37, 17);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "Curs";
+            this.listBoxResum.FormattingEnabled = true;
+            this.listBoxResum.ItemHeight = 16;
+            this.listBoxResum.Location = new System.Drawing.Point(10, 60);
+            this.listBoxResum.Name = "listBoxResum";
+            this.listBoxResum.Size = new System.Drawing.Size(1082, 212);
+            this.listBoxResum.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1143, 652);
+            this.ClientSize = new System.Drawing.Size(1124, 727);
+            this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -413,6 +473,7 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -443,14 +504,19 @@
         private System.Windows.Forms.RadioButton radioButtonMati;
         private System.Windows.Forms.TextBox textBoxTutor;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxProfessor;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxProfessorVol;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxTutorVol;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBoxCursVol;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button buttonAfegirResum;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.ListBox listBoxResum;
+        private System.Windows.Forms.Button buttonEliminarTots;
+        private System.Windows.Forms.Button buttonEliminarSeleccionats;
     }
 }
 
