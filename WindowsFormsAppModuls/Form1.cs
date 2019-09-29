@@ -136,7 +136,52 @@ namespace WindowsFormsAppModuls
         {
             if (ValidarDades())
             {
+                AfegirDades();
+            }
+        }
 
+        private void AfegirDades()
+        {
+            String dades;
+
+            dades = dateTimePickerDataPeticio.Value.ToShortDateString() + ";" + textBoxCognoms.Text + textBoxNom.Text + ";" + comboBoxModul.SelectedItem.ToString() + ";";
+
+            for (int i = 0; i < checkedListBoxUfs.CheckedItems.Count; i++)
+            {
+                dades = dades + checkedListBoxUfs.CheckedItems[i].ToString() + ";";
+            }
+
+            if (radioButtonMati.Checked)
+            {
+                dades = dades + radioButtonMati.Text + ";";
+            }
+            else
+            {
+                dades = dades + radioButtonTarda.Text + ";";
+            }
+
+            dades = dades + comboBoxCurs.SelectedItem.ToString() + ";" + textBoxTutor.Text + ";" + comboBoxProfessor.SelectedItem.ToString() + ";";
+                
+            if (radioButtonMatiVol.Checked)
+            {
+                dades = dades + radioButtonMatiVol.Text + ";";
+            }
+            else
+            {
+                dades = dades + radioButtonTardaVol.Text + ";";
+            }
+
+            dades = dades + comboBoxCursVol.SelectedItem.ToString() + ";" + textBoxTutorVol.Text + ";" + comboBoxProfessorVol.SelectedItem.ToString() + ";";
+
+            if (!listBoxResum.Items.Contains(dades))
+            {
+                listBoxResum.Items.Add(dades);
+
+                //Falta esborrar les dades
+            }
+            else
+            {
+                MessageBox.Show("Aquestes dades ja han estat introduïdes", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -194,6 +239,30 @@ namespace WindowsFormsAppModuls
             }
 
             return correcte;
+        }
+
+        private void buttonEliminarTots_Click(object sender, EventArgs e)
+        {
+            DialogResult resultat = MessageBox.Show("Estas segur d'esborrar totes les dades?", "INFO", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resultat == DialogResult.Yes)
+            {
+                listBoxResum.Items.Clear();
+            }
+        }
+
+        private void buttonEliminarSeleccionats_Click(object sender, EventArgs e)
+        {
+            DialogResult resultat = MessageBox.Show("Estas segur d'esborrar totes les dades seleccionades?", "INFO", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resultat == DialogResult.Yes)
+            {
+                for (int i = listBoxResum.SelectedItems.Count - 1; i >= 0; i--)
+                {
+                    listBoxResum.Items.Remove(listBoxResum.SelectedItems[i]);
+                }
+            }
+                
         }
     }
 }

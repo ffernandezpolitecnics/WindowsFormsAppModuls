@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonAfegirResum = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.comboBoxProfessorVol = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -60,11 +61,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePickerDataPeticio = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonAfegirResum = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.buttonEliminarSeleccionats = new System.Windows.Forms.Button();
-            this.buttonEliminarTots = new System.Windows.Forms.Button();
             this.listBoxResum = new System.Windows.Forms.ListBox();
+            this.buttonEliminarTots = new System.Windows.Forms.Button();
+            this.buttonEliminarSeleccionats = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -90,6 +90,16 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dades";
+            // 
+            // buttonAfegirResum
+            // 
+            this.buttonAfegirResum.Location = new System.Drawing.Point(6, 378);
+            this.buttonAfegirResum.Name = "buttonAfegirResum";
+            this.buttonAfegirResum.Size = new System.Drawing.Size(75, 30);
+            this.buttonAfegirResum.TabIndex = 6;
+            this.buttonAfegirResum.Text = "Afegir resum";
+            this.buttonAfegirResum.UseVisualStyleBackColor = true;
+            this.buttonAfegirResum.Click += new System.EventHandler(this.buttonAfegirResum_Click);
             // 
             // groupBox5
             // 
@@ -408,16 +418,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Data petició";
             // 
-            // buttonAfegirResum
-            // 
-            this.buttonAfegirResum.Location = new System.Drawing.Point(6, 378);
-            this.buttonAfegirResum.Name = "buttonAfegirResum";
-            this.buttonAfegirResum.Size = new System.Drawing.Size(75, 30);
-            this.buttonAfegirResum.TabIndex = 6;
-            this.buttonAfegirResum.Text = "Afegir resum";
-            this.buttonAfegirResum.UseVisualStyleBackColor = true;
-            this.buttonAfegirResum.Click += new System.EventHandler(this.buttonAfegirResum_Click);
-            // 
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.listBoxResum);
@@ -430,6 +430,26 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Resum";
             // 
+            // listBoxResum
+            // 
+            this.listBoxResum.FormattingEnabled = true;
+            this.listBoxResum.ItemHeight = 16;
+            this.listBoxResum.Location = new System.Drawing.Point(10, 60);
+            this.listBoxResum.Name = "listBoxResum";
+            this.listBoxResum.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBoxResum.Size = new System.Drawing.Size(1082, 212);
+            this.listBoxResum.TabIndex = 2;
+            // 
+            // buttonEliminarTots
+            // 
+            this.buttonEliminarTots.Location = new System.Drawing.Point(197, 22);
+            this.buttonEliminarTots.Name = "buttonEliminarTots";
+            this.buttonEliminarTots.Size = new System.Drawing.Size(184, 31);
+            this.buttonEliminarTots.TabIndex = 1;
+            this.buttonEliminarTots.Text = "Eliminar tots";
+            this.buttonEliminarTots.UseVisualStyleBackColor = true;
+            this.buttonEliminarTots.Click += new System.EventHandler(this.buttonEliminarTots_Click);
+            // 
             // buttonEliminarSeleccionats
             // 
             this.buttonEliminarSeleccionats.Location = new System.Drawing.Point(7, 22);
@@ -438,24 +458,7 @@
             this.buttonEliminarSeleccionats.TabIndex = 0;
             this.buttonEliminarSeleccionats.Text = "Eliminar seleccionats";
             this.buttonEliminarSeleccionats.UseVisualStyleBackColor = true;
-            // 
-            // buttonEliminarTots
-            // 
-            this.buttonEliminarTots.Location = new System.Drawing.Point(197, 22);
-            this.buttonEliminarTots.Name = "buttonEliminarTots";
-            this.buttonEliminarTots.Size = new System.Drawing.Size(184, 31);
-            this.buttonEliminarTots.TabIndex = 1;
-            this.buttonEliminarTots.Text = "Eliminar seleccionats";
-            this.buttonEliminarTots.UseVisualStyleBackColor = true;
-            // 
-            // listBoxResum
-            // 
-            this.listBoxResum.FormattingEnabled = true;
-            this.listBoxResum.ItemHeight = 16;
-            this.listBoxResum.Location = new System.Drawing.Point(10, 60);
-            this.listBoxResum.Name = "listBoxResum";
-            this.listBoxResum.Size = new System.Drawing.Size(1082, 212);
-            this.listBoxResum.TabIndex = 2;
+            this.buttonEliminarSeleccionats.Click += new System.EventHandler(this.buttonEliminarSeleccionats_Click);
             // 
             // Form1
             // 
